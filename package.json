@@ -1,6 +1,6 @@
 {
   "name": "@devinit/graphql-next",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "api for di-pdfs",
   "main": "lib/index.js",
   "scripts": {
