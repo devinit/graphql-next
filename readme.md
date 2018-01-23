@@ -8,11 +8,10 @@ Currently a very opinionated graphql framework with postgres db support
 
 ______________________________________
 
-currently used in [datahub-api](https://github.com/devinit/datahub-api) & [graphql-next](https://github.com/devinit/graphql-next)
+currently used in [datahub-api](https://github.com/devinit/datahub-api) & [di-pdfs/ssc-api](https://github.com/devinit/di-pdfs/tree/master/packages/ssc-api)
 
 Todo
 _____________
 
  - decouple database integration such that its a plugin
- - add proper documentation
-
+ - add proper documentation (for usage you can look at )
