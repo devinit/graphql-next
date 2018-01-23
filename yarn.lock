@@ -77,9 +77,21 @@
     "@types/express" "*"
     "@types/node" "*"
 
-"@types/color@1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@types/color/-/color-1.0.5.tgz#e0e9bbdc33620988f1fa1bba5db04210cb766b87"
+"@types/color-convert@*":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@types/color-convert/-/color-convert-1.9.0.tgz#bfa8203e41e7c65471e9841d7e306a7cd8b5172d"
+  dependencies:
+    "@types/color-name" "*"
+
+"@types/color-name@*":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.0.tgz#926f76f7e66f49cc59ad880bb15b030abbf0b66d"
+
+"@types/color@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/color/-/color-2.0.0.tgz#73c5db00fcf15426d5a12f9af943eed03d7e0984"
+  dependencies:
+    "@types/color-convert" "*"
 
 "@types/cors@2.8.3":
   version "2.8.3"
@@ -115,15 +127,9 @@
   dependencies:
     "@types/node" "*"
 
-<<<<<<< HEAD
-"@types/graphql@0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.9.1.tgz#b04ebe84bc997cc60dbea2ed4d0d4342c737f99d"
-=======
 "@types/graphql@0.12.1":
   version "0.12.1"
   resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.12.1.tgz#2c2f9a0da3cd23ee1ce7a6e6c9135ceeb9131c05"
->>>>>>> 35cda6e3e6b1318538acdd12a4f02b96983019e4
 
 "@types/helmet@0.0.35":
   version "0.0.35"
@@ -307,11 +313,7 @@ apollo-fetch@^0.7.0:
   dependencies:
     cross-fetch "^1.0.0"
 
-<<<<<<< HEAD
-apollo-link@^1.0.0, apollo-link@^1.0.7:
-=======
-apollo-link@1.0.7:
->>>>>>> 35cda6e3e6b1318538acdd12a4f02b96983019e4
+apollo-link@1.0.7, apollo-link@^1.0.0:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/apollo-link/-/apollo-link-1.0.7.tgz#42cd38a7378332fc3e41a214ff6a6e5e703a556f"
   dependencies:
