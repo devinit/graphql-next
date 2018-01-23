@@ -115,15 +115,9 @@
   dependencies:
     "@types/node" "*"
 
-<<<<<<< HEAD
-"@types/graphql@0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.9.1.tgz#b04ebe84bc997cc60dbea2ed4d0d4342c737f99d"
-=======
 "@types/graphql@0.12.1":
   version "0.12.1"
   resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.12.1.tgz#2c2f9a0da3cd23ee1ce7a6e6c9135ceeb9131c05"
->>>>>>> 35cda6e3e6b1318538acdd12a4f02b96983019e4
 
 "@types/helmet@0.0.35":
   version "0.0.35"
@@ -153,9 +147,9 @@
   version "7.0.28"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.28.tgz#3a8c62b718a73bbb89ede4aba5ab12c8f822c36e"
 
-"@types/ramda@0.24.18":
-  version "0.24.18"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.24.18.tgz#2513efcccf47ca13d388d503f309df4b64ba52fc"
+"@types/ramda@0.25.16":
+  version "0.25.16"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.25.16.tgz#1d4eeb78d3247d1ceef971b458dd8469646cd1b4"
 
 "@types/serve-static@*":
   version "1.13.1"
@@ -307,11 +301,7 @@ apollo-fetch@^0.7.0:
   dependencies:
     cross-fetch "^1.0.0"
 
-<<<<<<< HEAD
-apollo-link@^1.0.0, apollo-link@^1.0.7:
-=======
-apollo-link@1.0.7:
->>>>>>> 35cda6e3e6b1318538acdd12a4f02b96983019e4
+apollo-link@1.0.7, apollo-link@^1.0.0:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/apollo-link/-/apollo-link-1.0.7.tgz#42cd38a7378332fc3e41a214ff6a6e5e703a556f"
   dependencies:
