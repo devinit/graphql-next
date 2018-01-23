@@ -15,3 +15,5 @@ _____________
 
  - decouple database integration such that its a plugin
  - add proper documentation (for usage you can look at )
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/devinit/graphql-next.svg)](https://greenkeeper.io/)
