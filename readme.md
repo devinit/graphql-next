@@ -4,7 +4,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e501f77141774b74979c60d5cfd219ac)](https://www.codacy.com/app/epicallan/graphql-next?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=devinit/graphql-next&amp;utm_campaign=Badge_Grade)
 
 
-Currently a very opinionated graphql framework with postgres db support
+Currently a very opinionated graphql framework with postgres db support with util functions and other goodies specific for devinit projects.
 
 ______________________________________
 
