@@ -2381,12 +2381,6 @@ graphql-tools@2.19.0:
     graphql-subscriptions "^0.5.6"
     uuid "^3.1.0"
 
-graphql@0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.9.0.tgz#ff9748a86ae81d4ecd2f2ba27fe5ac7a77734b1d"
-  dependencies:
-    iterall "1.0.3"
-
 graphql@0.9.6, graphql@^0.9.5, graphql@^0.9.6:
   version "0.9.6"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.9.6.tgz#514421e9d225c29dfc8fd305459abae58815ef2c"
@@ -3003,10 +2997,6 @@ isurl@^1.0.0-alpha5:
   dependencies:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
-
-iterall@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.0.3.tgz#e0b31958f835013c323ff0b10943829ac69aa4b7"
 
 iterall@1.1.3, iterall@^1.0.0, iterall@^1.1.3:
   version "1.1.3"
@@ -3627,7 +3617,7 @@ mime-db@~1.30.0:
   version "1.30.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.30.0.tgz#74c643da2dd9d6a45399963465b26d5ca7d71f01"
 
-mime-types@^2.1.12, mime-types@~2.1.15, mime-types@~2.1.16, mime-types@~2.1.17, mime-types@~2.1.7:
+mime-types@2.1.17, mime-types@^2.1.12, mime-types@~2.1.15, mime-types@~2.1.16, mime-types@~2.1.17, mime-types@~2.1.7:
   version "2.1.17"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.17.tgz#09d7a393f03e995a79f8af857b70a9e0ab16557a"
   dependencies:
@@ -4401,9 +4391,9 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
-release-it@6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/release-it/-/release-it-6.1.0.tgz#28635a7e43c9a43c2e0d1dd8a33f27edc7e5b653"
+release-it@6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/release-it/-/release-it-6.1.1.tgz#5004644b20e1fc9b6946ba6e084d3358d9a7b1ee"
   dependencies:
     async-retry "1.1.4"
     babel-preset-env "1.6.1"
@@ -4419,6 +4409,7 @@ release-it@6.1.0:
     inquirer "5.0.1"
     is-ci "1.1.0"
     lodash "4.17.4"
+    mime-types "2.1.17"
     ora "1.3.0"
     os-name "2.0.1"
     parse-repo "1.0.4"
