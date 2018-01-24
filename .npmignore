@@ -1,3 +1,30 @@
-src
+# unwanted output
+.output
+.out
+
+# dependencies
+yarn.lock
+package-lock.json
+
+# conifgs
+
+.babelrc
+
+# logs
+*.log
+
+# coverage
+.nyc_output
 coverage
+
+# test output
+test/**/out
+.DS_Store
+.csslintrc
+
+#editors
+.idea
 .vscode
+
+# source files
+src
