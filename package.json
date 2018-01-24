@@ -47,7 +47,7 @@
   "devDependencies": {
     "@gql2ts/from-schema": "1.1.1",
     "@gql2ts/types": "next",
-    "@playlyfe/gql": "^2.3.1",
+    "@playlyfe/gql": "2.5.0",
     "@types/body-parser": "1.16.3",
     "@types/color": "1.0.4",
     "@types/cors": "2.8.1",
