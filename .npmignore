@@ -2,10 +2,6 @@
 .output
 .out
 
-# dependencies
-yarn.lock
-package-lock.json
-
 # conifgs
 
 .babelrc
@@ -25,6 +21,3 @@ test/**/out
 #editors
 .idea
 .vscode
-
-# source files
-src
