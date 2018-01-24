@@ -8,11 +8,11 @@ Currently a very opinionated graphql framework with postgres db support, util fu
 
 ______________________________________
 
-currently used in [datahub-api](https://github.com/devinit/datahub-api) & [di-pdfs/ssc-api](https://github.com/devinit/di-pdfs/tree/master/packages/ssc-api)
+currently used in [datahub-api](https://github.com/devinit/datahub-api) & [di-pdfs/ssc-ap](https://github.com/devinit/di-pdfs/tree/master/packages/ssc-api)
 
 Todo
 _____________
 
  - decouple database integration such that its a plugin
  - generalise and make truelly oss
- - add proper documentation (for usage you can look at )
+ - add proper documentation for usage you can look at [di-pdfs/ssc-ap](https://github.com/devinit/di-pdfs/tree/master/packages/ssc-api)
