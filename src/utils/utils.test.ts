@@ -1,4 +1,4 @@
-import {toId, getTotal, formatNumbers, normalizeKeyName, isDonor, groupedValuesIntoPercents} from '.';
+import {toId, getTotal, formatNumbers, normalizeKeyName, groupedValuesIntoPercents} from '.';
 import * as prettyFormat from 'pretty-format';
 
 const dataA = [
@@ -32,10 +32,4 @@ describe('Utility functions test', () => {
         const result =  groupedValuesIntoPercents(data, 'sector');
         expect(prettyFormat({result})).toMatchSnapshot();
     });
-    it('should return whether country is donor or not', async () => {
-        const isDonorCountryA = await isDonor('uganda');
-        const isDonorCountryB = await isDonor('austria');
-        expect(isDonorCountryA).toBe(false);
-        expect(isDonorCountryB).toBe(true);
-    }, 10000);
 });

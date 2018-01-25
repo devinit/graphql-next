@@ -1,5 +1,4 @@
 import * as R from 'ramda';
-import {IEntity, ICurrency, getCurrency, getEntityBySlugAsync} from '../cms/modules/global';
 import * as shortid from 'shortid';
 import {IhasDiId, Isummable} from './types';
 import {IDatabase} from 'pg-promise';
@@ -62,18 +61,6 @@ export const groupedValuesIntoPercents =
     return R.flatten(groupAsPers);
 };
 
-export const getCurrencyCode = async (id: string): Promise<string>  => {
-    try {
-        const currencyList: ICurrency[] = await getCurrency();
-        const entity: IEntity | undefined = await getEntityBySlugAsync(id);
-        if (!entity) throw new Error(`entity was not found for slug: ${id}`);
-        const currency: ICurrency | undefined = R.find(R.propEq('id', entity.id), currencyList) as ICurrency;
-        return currency ? currency.code : 'NCU';
-    } catch (error) {
-        throw error;
-    }
-};
-
 export const getTableNameFromSql = (sqlStr: string): string | Error => {
     const matches = sqlStr.match(/FROM(.*)WHERE/);
     if (matches && matches.length) {
@@ -87,13 +74,6 @@ export const getIndicatorDataSimple = async<T extends {}> ({db, query}: {db: IDB
     return raw
         .map(toNumericFields)
         .map(obj => ({...obj, uid: shortid.generate()})) as T[];
-};
-
-export const isDonor = async (slug: string): Promise<boolean>  => {
-    const obj: IEntity | undefined = await getEntityBySlugAsync(slug);
-    if (!obj) throw new Error('Error in isDonor function, entity is undefined');
-    if (obj.donor_recipient_type === DONOR) return true;
-    return false;
 };
 
 export const normalizeKeyName = (columnName: string): string => {

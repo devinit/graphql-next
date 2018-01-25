@@ -8,7 +8,7 @@ Currently a very opinionated graphql framework with postgres db support, util fu
 
 ______________________________________
 
-currently used in [datahub-api](https://github.com/devinit/datahub-api) & [di-pdfs/ssc-ap](https://github.com/devinit/di-pdfs/tree/master/packages/ssc-api)
+currently used in [datahub-api](https://github.com/devinit/datahub-api/tree/dev) & [di-pdfs/ssc-ap](https://github.com/devinit/di-pdfs/tree/master/packages/ssc-api)
 
 Todo
 _____________

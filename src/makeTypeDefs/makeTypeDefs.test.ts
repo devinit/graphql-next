@@ -4,7 +4,7 @@ import { generateTsFromGql, getTypeDefs} from './';
 import * as prettyFormat from 'pretty-format';
 
 describe('gql Types to Typescript types', () => {
-
+    // TODO: should work with union tyoes
     it('should return merged typedefs', async () => {
         const typeDefs = await getTypeDefs('**/*.gql');
         expect(prettyFormat(typeDefs)).toMatchSnapshot();

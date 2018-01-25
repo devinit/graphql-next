@@ -1,1 +1,1 @@
-simple gql querying interface
+simple gql querying interface, for querying a gql api server

@@ -32,7 +32,7 @@ export const createSchema = async ({apiModules, gqlTypesGlobPattern, resolverPat
         const typeDefs = await getTypeDefs(gqlTypesGlobPattern);
         const modules = apiModules.reduce((all, module)  => {
             const moduleName: string = Object.keys(module)[0];
-            const initated = module[moduleName](db, githubGet);
+            const initated = module[moduleName](db);
             return {...all, [moduleName]: initated};
         }, {});
         const resolvers = await getResolvers(resolverPattern);
