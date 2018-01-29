@@ -5,6 +5,52 @@ type IndicatorValueNCUWithToolTip {
   toolTip: ToolTip!
 }
 
+type ToolTip {
+  source: String!
+  heading: String!
+}
+
+type IndicatorData {
+  year: Int!
+  value: Float!
+  id: String!
+  name: String!
+  color: String
+  uid: String!
+}
+
+type Domestic {
+  # eg Actual or budget
+  budget_type: String!
+  levels: [String]!
+  year: Int !
+  value: Float!
+  value_ncu: Float!
+  uid: String!
+  color: String!
+}
+
+type PopulationDistribution {
+  group: String!
+  value: Float!
+  year: Int!
+}
+
+type PopulationDistributionWithToolTip {
+  data: [PopulationDistribution]!
+  toolTip: ToolTip!
+}
+
+type IndicatorDataWithToolTip {
+  data: [IndicatorData]!
+  toolTip: ToolTip!
+}
+
+
+type IndicatorValueWithToolTip {
+  value: String!
+  toolTip: ToolTip!
+}
 type OverviewTabRegional {
   # WHAT PERCENTAGE OF PEOPLE IN WAKISO LIVE BELOW THE NATIONAL POVERTY LINE? 
   # can be no data or '12%'

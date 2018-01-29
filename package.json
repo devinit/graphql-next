@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "test": "jest src/utils/utils.test.ts",
+    "test": "jest",
     "patch": "release-it -i patch -n",
     "feature": "release-it -i minor -n",
     "breaking": "release-it -i major -n",
@@ -21,7 +21,7 @@
     "url": "https://github.com/devinit/graphql-next.git"
   },
   "peerDependencies": {
-    "graphql": "0.9.0"
+    "graphql": ">= 0.10 < 0.12.0"
   },
   "dependencies": {
     "@gql2ts/from-schema": "1.4.0",
@@ -37,13 +37,13 @@
     "express": "4.16.2",
     "fs-extra": "5.0.0",
     "glob-promise": "3.3.0",
-    "graphql-tools": "2.19.0",
+    "graphql-tools": "2.16.0",
     "helmet": "3.10.0",
     "lru-cache": "4.1.1",
-    "morgan": "1.9.0",
     "merge-graphql-schemas": "1.4.0",
-    "prettier": "1.10.2",
+    "morgan": "1.9.0",
     "pg-promise": "7.4.0",
+    "prettier": "1.10.2",
     "ramda": "0.25.0",
     "shortid": "2.2.8"
   },
