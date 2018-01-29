@@ -55,7 +55,7 @@ export const valuesIntoPercents = <T extends {value: number}>(data: T[], precisi
 
 export const groupedValuesIntoPercents =
     <T extends {value: number}>(data: T[], groupName: string, precision?: number): T[] => {
-    const groups = R.groupBy(R.prop(groupName), data);
+    const groups = R.groupBy<T>((obj) => obj[groupName].toString(), data);
     const groupAsPers: any[][] = R.keys(groups).map(key =>
         valuesIntoPercents(groups[key] as T[], precision));
     return R.flatten(groupAsPers);

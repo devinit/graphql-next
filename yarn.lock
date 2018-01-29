@@ -82,9 +82,9 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.0.tgz#926f76f7e66f49cc59ad880bb15b030abbf0b66d"
 
-"@types/color@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@types/color/-/color-2.0.0.tgz#73c5db00fcf15426d5a12f9af943eed03d7e0984"
+"@types/color@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@types/color/-/color-2.0.1.tgz#73a7eefe83e42dcc888b13ae74dc0ec9de6bf815"
   dependencies:
     "@types/color-convert" "*"
 
@@ -151,9 +151,9 @@
   version "9.3.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-9.3.0.tgz#3a129cda7c4e5df2409702626892cb4b96546dd5"
 
-"@types/ramda@0.24.18":
-  version "0.24.18"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.24.18.tgz#2513efcccf47ca13d388d503f309df4b64ba52fc"
+"@types/ramda@0.25.16":
+  version "0.25.16"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.25.16.tgz#1d4eeb78d3247d1ceef971b458dd8469646cd1b4"
 
 "@types/serve-static@*":
   version "1.13.1"
