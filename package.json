@@ -1,6 +1,6 @@
 {
   "name": "@devinit/graphql-next",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "simple graphql framework @devinit",
   "main": "lib/index.js",
   "scripts": {
@@ -38,7 +38,7 @@
     "glob-promise": "3.3.0",
     "graphql-tools": "2.19.0",
     "helmet": "3.10.0",
-    "lru-cache": "4.1.1", 
+    "lru-cache": "4.1.1",
     "morgan": "1.9.0",
     "merge-graphql-schemas": "1.4.0",
     "prettier": "1.10.2",
