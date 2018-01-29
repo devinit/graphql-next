@@ -1,0 +1,31 @@
+type ToolTip {
+  source: String!
+  heading: String!
+}
+
+type IndicatorValueWithToolTip {
+  value: String!
+  toolTip: ToolTip!
+}
+
+type PovertyTabKe {
+  poorestPeople: IndicatorValueWithToolTip!
+  #WHAT IS THE AVERAGE LIFE EXPECTANCY? 
+  meanExpenditure: IndicatorValueWithToolTip!
+  #WHAT IS THE STANDARD OF LIVING SCORE? 
+  povertyGap: IndicatorValueWithToolTip!
+}
+type PovertyTabUg {
+  poorestPeople: IndicatorValueWithToolTip!
+  #WHAT IS THE AVERAGE LIFE EXPECTANCY? 
+  lifeExpectancy: IndicatorValueWithToolTip!
+  #WHAT IS THE STANDARD OF LIVING SCORE? 
+  stdOfLiving: IndicatorValueWithToolTip!
+}
+
+union PovertyTabRegional = PovertyTabUg | PovertyTabKe
+
+type Query {  
+  # id is district slug
+  povertyTabRegional(id: String!, country: String!): PovertyTabRegional
+}
