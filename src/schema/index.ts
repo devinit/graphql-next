@@ -2,7 +2,7 @@
 import { GraphQLSchema} from 'graphql';
 import { makeExecutableSchema } from 'graphql-tools';
 import { mergeResolvers } from 'merge-graphql-schemas';
-import { getTypeDefs } from '../makeTypeDefs';
+import { getTypeDefs } from '../typeDefs';
 import * as glob from 'glob-promise';
 import {precache} from '../cache';
 import db from '../db';
