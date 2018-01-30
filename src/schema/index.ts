@@ -4,9 +4,7 @@ import { makeExecutableSchema } from 'graphql-tools';
 import { mergeResolvers } from 'merge-graphql-schemas';
 import { getTypeDefs } from '../typeDefs';
 import * as glob from 'glob-promise';
-import {precache} from '../cache';
 import db from '../db';
-import {githubGet} from '../github';
 import {IDB} from '../db';
 
 export const getResolvers = async (globPattern) => {
@@ -42,11 +40,4 @@ export const createSchema = async ({apiModules, gqlTypesGlobPattern, resolverPat
     } catch (error) {
         throw new Error(error);
     }
-};
-
-export const preCacheAll = async () => {
-    await precache({
-        cms: githubGet,
-        dw: db.manyCacheable
-    });
 };
