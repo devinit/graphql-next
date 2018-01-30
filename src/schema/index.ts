@@ -14,7 +14,8 @@ export const getResolvers = async (globPattern) => {
     if (!resolverFiles.length) throw new Error('wrong resolver glob pattern');
     // get graphql resolver objects
     const resolversLoad: any[] = resolverFiles
-        .map(moduleName => require(moduleName));
+        .map(moduleName => require(moduleName))
+        .map(loadedModule => loadedModule.default ? loadedModule.default : loadedModule);
     return resolversLoad.length > 1
         ? mergeResolvers(resolversLoad) : resolversLoad[0];
 };
