@@ -24,7 +24,7 @@ declare namespace DH {
 
   interface IQuery {
     /**
-    description: id is district slug
+    id is district slug
   */
     povertyTabRegional: PovertyTabRegional | null;
   }
@@ -38,11 +38,11 @@ declare namespace DH {
   interface IPovertyTabUg {
     poorestPeople: IIndicatorValueWithToolTip;
     /**
-    description: WHAT IS THE AVERAGE LIFE EXPECTANCY? 
+    WHAT IS THE AVERAGE LIFE EXPECTANCY? 
   */
     lifeExpectancy: IIndicatorValueWithToolTip;
     /**
-    description: WHAT IS THE STANDARD OF LIVING SCORE? 
+    WHAT IS THE STANDARD OF LIVING SCORE? 
   */
     stdOfLiving: IIndicatorValueWithToolTip;
   }
@@ -63,11 +63,11 @@ declare namespace DH {
   interface IPovertyTabKe {
     poorestPeople: IIndicatorValueWithToolTip;
     /**
-    description: WHAT IS THE AVERAGE LIFE EXPECTANCY? 
+    WHAT IS THE AVERAGE LIFE EXPECTANCY? 
   */
     meanExpenditure: IIndicatorValueWithToolTip;
     /**
-    description: WHAT IS THE STANDARD OF LIVING SCORE? 
+    WHAT IS THE STANDARD OF LIVING SCORE? 
   */
     povertyGap: IIndicatorValueWithToolTip;
   }
