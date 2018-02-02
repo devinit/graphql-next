@@ -47,8 +47,8 @@ const graphqlMiddleware = [
 ];
 
 const lruOpts: LRU.Options<any> = {
-  max: 500,
-  maxAge: 1000 * 60 * 60 * 60
+  max: 1000,
+  maxAge: 50000 * 60 * 60 * 60
 };
 
 export const appCache: LRU.Cache<any, any> = LRU(lruOpts);
