@@ -36,7 +36,7 @@
     "express": "4.16.2",
     "fs-extra": "5.0.0",
     "glob-promise": "3.3.0",
-    "graphql-tools": "2.20.1",
+    "graphql-tools": "2.20.2",
     "helmet": "3.10.0",
     "lru-cache": "4.1.1",
     "morgan": "1.9.0",
