@@ -21,7 +21,7 @@
     "url": "https://github.com/devinit/graphql-next.git"
   },
   "peerDependencies": {
-    "graphql": ">= 0.10.0 < 0.14.0"
+    "graphql": ">= 0.10.0 < 0.12.0"
   },
   "dependencies": {
     "@gql2ts/from-schema": "1.4.1",
