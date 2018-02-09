@@ -11,6 +11,9 @@
     "breaking": "release-it -i major -n",
     "build": "tsc"
   },
+  "bin": {
+    "gqlToTs": "lib/typeDefs/cli.js"
+  },
   "author": "epicallan.al@gmail.com",
   "license": "ISC",
   "publishConfig": {
