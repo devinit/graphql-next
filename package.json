@@ -12,7 +12,7 @@
     "build": "tsc"
   },
   "bin": {
-    "gqlToTs": "lib/typeDefs/cli.js"
+    "gqlToTs": "./lib/typeDefs/cli.js"
   },
   "author": "epicallan.al@gmail.com",
   "license": "ISC",
