@@ -62,7 +62,7 @@
     "@types/lru-cache": "4.1.0",
     "@types/morgan": "1.7.35",
     "@types/ramda": "0.25.17",
-    "@types/node": "9.4.3",
+    "@types/node": "9.4.5",
     "@types/shortid": "0.0.29",
     "concurrently": "3.5.1",
     "git-pre-hooks": "1.2.0",
