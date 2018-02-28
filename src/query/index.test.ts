@@ -2,18 +2,19 @@ import * as prettyFormat from 'pretty-format';
 import {get} from '.';
 
 describe('Test query', () => {
-    it.skip('should query api', async () => {
+    it('should query api', async () => {
         const query = `
-            query China {
-                overallMultiExpenditure {
+            query Countries {
+                countries {
                 id
-                year
-                color
-                value
-                uid
+                name
+                slug
+                has_domestic_data
+                countryType
+                hasPDF
                 }
             }`;
-        const data = await get('http://localhost:8080/graphql', query);
+        const data = await get('http://212.111.41.68:3000/graphql', query);
         expect(prettyFormat(data)).toMatchSnapshot();
      });
 });
