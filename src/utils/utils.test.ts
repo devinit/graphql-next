@@ -1,5 +1,7 @@
 import {toId, getTotal, formatNumbers, normalizeKeyName, groupedValuesIntoPercents} from '.';
 import * as prettyFormat from 'pretty-format';
+import {uidPatchForObjs} from './test.utils';
+import dummyData from './testData';
 
 const dataA = [
         {di_id: 'AL', value: 3000, year: 2000},
@@ -31,5 +33,9 @@ describe('Utility functions test', () => {
         ];
         const result =  groupedValuesIntoPercents(data, 'sector');
         expect(prettyFormat({result})).toMatchSnapshot();
+    });
+    it('should turn uid values into unique_id_stub', () => {
+        const data =  uidPatchForObjs(dummyData);
+        expect(prettyFormat({data})).toMatchSnapshot();
     });
 });

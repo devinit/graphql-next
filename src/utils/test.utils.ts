@@ -2,14 +2,15 @@
 // this is because they are not constants and change on every new storyshots
 // the issue with this is that we cant compare new and old storyshots
 import * as prettyFormat from 'pretty-format';
+import * as R from 'ramda';
 
 export type ListWithUid = Array<{uid: string} & any>;
 
 export interface IHasUid {
     [field: string]: {
-        data: ListWithUid;
-        toolTip: any;
-    };
+        data: ListWithUid | any[] | any | null;
+        [field: string]: any | null;
+     } | any;
 }
 
 export const replaceUidInList = (data: ListWithUid): ListWithUid => {
@@ -19,13 +20,21 @@ export const replaceUidInList = (data: ListWithUid): ListWithUid => {
     });
 };
 
-export const uidPatchForTabData = (data: IHasUid) => {
+export const uidPatchForObjs = (data: IHasUid) => {
     return Object.keys(data).reduce((acc, key: string) => {
-        const itemsWithUid: ListWithUid = data[key].data;
-        const newItems =  replaceUidInList(itemsWithUid);
-        return {...acc, [key]: { ...data[key], data: newItems}};
+        if (data[key] && data[key].data && Array.isArray(data[key].data)) {
+            const hasUID =
+                R.all((obj: any) => obj.uid && obj.uid !== undefined, data[key].data);
+            const newItems =
+                hasUID ? replaceUidInList(data[key].data) : data[key].data;
+            return {...acc, [key]: { ...data[key], data: newItems}};
+        }
+        return {...acc, [key]: { ...data[key]}};
     }, {});
 };
 
 export const prettyLists =
     (data: ListWithUid) => prettyFormat(replaceUidInList(data));
+
+export const prettyDataObjs =
+    (data: IHasUid) => prettyFormat(uidPatchForObjs(data));

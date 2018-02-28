@@ -11,6 +11,63 @@ exports[`Utility functions test should create human friendly numbers i.e 1.5k fo
 }"
 `;
 
+exports[`Utility functions test should turn uid values into unique_id_stub 1`] = `
+"Object {
+  \\"data\\": Object {
+    \\"averageIncomerPerPerson\\": Object {
+      \\"data\\": Array [
+        Object {
+          \\"color\\": null,
+          \\"id\\": \\"RO\\",
+          \\"name\\": \\"Romania\\",
+          \\"uid\\": \\"unique_id_stub\\",
+          \\"value\\": 9500,
+          \\"year\\": 2015,
+        },
+        Object {
+          \\"color\\": null,
+          \\"id\\": \\"RO\\",
+          \\"name\\": \\"Romania\\",
+          \\"uid\\": \\"unique_id_stub\\",
+          \\"value\\": 8258.92,
+          \\"year\\": 2014,
+        },
+        Object {
+          \\"color\\": null,
+          \\"id\\": \\"RO\\",
+          \\"name\\": \\"Romania\\",
+          \\"uid\\": \\"unique_id_stub\\",
+          \\"value\\": 8053.08,
+          \\"year\\": 2013,
+        },
+      ],
+      \\"toolTip\\": Object {
+        \\"heading\\": \\"Goverment Spending\\",
+        \\"source\\": \\"Development Intiative\\",
+      },
+    },
+    \\"domesticReaources\\": Object {},
+    \\"incomeDistTrend\\": Object {
+      \\"data\\": Array [
+        Object {
+          \\"color\\": \\"#e8443a\\",
+          \\"quintileName\\": \\"value bottom 20%\\",
+          \\"uid\\": \\"unique_id_stub\\",
+          \\"value\\": 8.88,
+        },
+        Object {
+          \\"color\\": \\"#847e84\\\\\\\\\\",
+          \\"quintileName\\": \\"value 2nd quintile\\",
+          \\"uid\\": \\"unique_id_stub\\",
+          \\"value\\": 13.71,
+        },
+      ],
+    },
+    \\"poorestPeople\\": Object {},
+  },
+}"
+`;
+
 exports[`Utility functions test should turn values into percents for grouped data 1`] = `
 "Object {
   \\"result\\": Array [
