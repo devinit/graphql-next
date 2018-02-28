@@ -10,21 +10,21 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@gql2ts/from-schema@1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@gql2ts/from-schema/-/from-schema-1.4.1.tgz#c275517dc1207e4ca372f2122d588634582a3bb8"
+"@gql2ts/from-schema@1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@gql2ts/from-schema/-/from-schema-1.4.3.tgz#afb96babe7c96c4d4affad48440c2bac18fc0b4c"
   dependencies:
-    "@gql2ts/language-typescript" "^1.4.1"
-    "@gql2ts/util" "^1.3.0"
+    "@gql2ts/language-typescript" "^1.4.3"
+    "@gql2ts/util" "^1.4.3"
     graphql ">= 0.10 <0.12"
 
-"@gql2ts/language-typescript@^1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@gql2ts/language-typescript/-/language-typescript-1.4.1.tgz#a493d085d13d643b1802a191edf2b6de8ee3531e"
+"@gql2ts/language-typescript@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@gql2ts/language-typescript/-/language-typescript-1.4.3.tgz#52837b33c8cb9d35ff80ac69212172023c1055e0"
   dependencies:
-    "@gql2ts/util" "^1.3.0"
+    "@gql2ts/util" "^1.4.3"
     humps "^2.0.0"
-    typescript "^2.2.2 < 2.7.0"
+    typescript "^2.2.2"
 
 "@gql2ts/types@1.4.3":
   version "1.4.3"
@@ -5003,13 +5003,9 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript@2.7.2:
+typescript@2.7.2, typescript@^2.2.2:
   version "2.7.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.7.2.tgz#2d615a1ef4aee4f574425cdff7026edf81919836"
-
-"typescript@^2.2.2 < 2.7.0":
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.6.2.tgz#3c5b6fd7f6de0914269027f03c0946758f7673a4"
 
 uglify-js@^2.6:
   version "2.8.29"
