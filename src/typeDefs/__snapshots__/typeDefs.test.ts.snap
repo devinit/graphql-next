@@ -11,16 +11,15 @@ declare namespace DH {
   }
 
   interface IGraphQLResponseError {
-    message: string;            // Required for all errors
+    message: string; // Required for all errors
     locations?: Array<IGraphQLResponseErrorLocation>;
-    [propName: string]: any;    // 7.2.2 says 'GraphQL servers may provide additional entries to error'
+    [propName: string]: any; // 7.2.2 says 'GraphQL servers may provide additional entries to error'
   }
 
   interface IGraphQLResponseErrorLocation {
     line: number;
     column: number;
   }
-
 
   interface IQuery {
     /**
@@ -29,11 +28,7 @@ declare namespace DH {
     povertyTabRegional: PovertyTabRegional | null;
   }
 
-
   type PovertyTabRegional = IPovertyTabUg | IPovertyTabKe;
-
-
-
 
   interface IPovertyTabUg {
     poorestPeople: IIndicatorValueWithToolTip;
@@ -47,18 +42,15 @@ declare namespace DH {
     stdOfLiving: IIndicatorValueWithToolTip;
   }
 
-
   interface IIndicatorValueWithToolTip {
     value: string;
     toolTip: IToolTip;
   }
 
-
   interface IToolTip {
     source: string;
     heading: string;
   }
-
 
   interface IPovertyTabKe {
     poorestPeople: IIndicatorValueWithToolTip;
