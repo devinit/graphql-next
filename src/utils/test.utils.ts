@@ -20,7 +20,7 @@ export const replaceUidInList = (data: ListWithUid): ListWithUid => {
     });
 };
 
-export const uidPatchForObjs = (data: IHasUid) => {
+export const uidPatchForObjs = (data: IHasUid): IHasUid => {
     return Object.keys(data).reduce((acc, key: string) => {
         if (data[key] && data[key].data && Array.isArray(data[key].data)) {
             const hasUID =
