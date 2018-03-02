@@ -38,3 +38,8 @@ export const prettyLists =
 
 export const prettyDataObjs =
     (data: IHasUid) => prettyFormat(uidPatchForObjs(data));
+
+export const prettyListMany = (data: ListWithUid[]) => {
+ const result =  R.map((item: ListWithUid) => replaceUidInList(item), data);
+ return prettyFormat(result);
+};
