@@ -14,7 +14,7 @@ describe('Test query', () => {
                 hasPDF
                 }
             }`;
-        const data = await get('http://212.111.41.68:3000/graphql', query);
+        const data = await get('http://212.111.41.68:9090/graphql', query);
         expect(prettyFormat(data)).toMatchSnapshot();
      }, 10000);
 });

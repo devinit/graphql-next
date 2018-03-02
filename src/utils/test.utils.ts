@@ -8,8 +8,7 @@ export type ListWithUid = Array<{uid: string} & any>;
 
 export interface IHasUid {
     [field: string]: {
-        data: ListWithUid | any[] | any | null;
-        [field: string]: any | null;
+        [field: string]: ListWithUid | any[] | any | null;
      } | any;
 }
 
@@ -20,13 +19,14 @@ export const replaceUidInList = (data: ListWithUid): ListWithUid => {
     });
 };
 
-export const uidPatchForObjs = (data: IHasUid) => {
+export const uidPatchForObjs = (data: IHasUid, field: string = 'data') => {
     return Object.keys(data).reduce((acc, key: string) => {
-        if (data[key] && data[key].data && Array.isArray(data[key].data)) {
+        if (data[key] && data[key][field] && Array.isArray(data[key][field])) {
+            const dataWithUID = data[key][field];
             const hasUID =
-                R.all((obj: any) => obj.uid && obj.uid !== undefined, data[key].data);
+                R.all((obj: any) => obj.uid && obj.uid !== undefined,  dataWithUID);
             const newItems =
-                hasUID ? replaceUidInList(data[key].data) : data[key].data;
+                hasUID ? replaceUidInList( dataWithUID) :  dataWithUID;
             return {...acc, [key]: { ...data[key], data: newItems}};
         }
         return {...acc, [key]: { ...data[key]}};

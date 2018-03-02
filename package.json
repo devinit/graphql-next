@@ -84,7 +84,6 @@
     "transform": {
       ".(ts)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "mapCoverage": true,
     "coverageDirectory": "./coverage/",
     "testEnvironment": "node",
     "testRegex": ".*\\.test\\.ts$",
