@@ -1,6 +1,6 @@
 {
   "name": "@devinit/graphql-next",
-  "version": "0.1.19",
+  "version": "0.2.0",
   "description": "simple graphql framework @devinit",
   "main": "lib/index.js",
   "scripts": {
