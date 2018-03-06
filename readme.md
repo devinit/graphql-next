@@ -19,4 +19,4 @@ _____________
 
  - decouple database integration such that its a plugin
  - generalise and make truelly oss
- - add proper documentation for usage you can look at [di-pdfs/ssc-ap](https://github.com/devinit/di-pdfs/tree/master/packages/ssc-api)
+ - add proper documentation for usage you can look at [di-pdfs/ssc-ap](https://github.com/devinit/di-pdfs/tree/master/packages/ssc-api) or the project [tests](https://github.com/devinit/graphql-next/tree/master/src/tests)
