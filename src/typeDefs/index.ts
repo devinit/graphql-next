@@ -57,6 +57,7 @@ export const generateTsFromGql: (options?: IgqlTsOpts) =>  Promise <string | any
         console.error(error);
     }
 };
-if (process.env.NODE_ENV !== 'test') {
+
+if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
     generateTsFromGql({outFile: 'index.d.ts'});
 }

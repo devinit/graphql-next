@@ -62,7 +62,7 @@ const appCacheMiddleWare = (req, res, next) => {
   return next();
 };
 
-const setupGraphql = async (options: IMainOptions, app) => {
+const setupGraphql = async (options: IMainOptions, app): Promise<any> => {
     try {
         const schema = await createSchema({
           resolverPattern: options.resolverPattern,
@@ -90,7 +90,7 @@ const setupGraphql = async (options: IMainOptions, app) => {
           app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
         }
 
-        return new Promise((resolve) => {
+        return new Promise((resolve, reject) => {
           const server = app.listen(options.port, () => {
             /* istanbul ignore if: no need to test verbose print */
             if (options.verbose) {
@@ -98,11 +98,12 @@ const setupGraphql = async (options: IMainOptions, app) => {
             }
             resolve(server);
           }).on('error', (err: Error) => {
-            console.error(err);
+            reject(err);
           });
         });
       } catch (error) {
         if (error) console.error(error);
+        throw new Error(error);
       }
 };
 
@@ -130,5 +131,5 @@ export async function main(opts: IMainOptions) {
 
   app.get('/', (_req, res) => res.send('graphiql server works, explore it at the /graphiql route'));
 
-  setupGraphql(options, app);
+  return setupGraphql(options, app);
 }
