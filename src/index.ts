@@ -31,20 +31,20 @@ function verbosePrint(port, enableGraphiql) {
   }
 }
 
-const graphqlMiddleware = [
-  bodyParser.text({
-    type: 'application/graphql'
-  }),
-  // tslint:disable-next-line:variable-name
-  (req, _res, next) => {
-    if (req.is('application/graphql')) {
-      req.body = {
-        query: req.body
-      };
-    }
-    next();
-  }
-];
+// const graphqlMiddleware = [
+//   bodyParser.text({
+//     type: 'application/graphql'
+//   }),
+//   // tslint:disable-next-line:variable-name
+//   (req, _res, next) => {
+//     if (req.is('application/graphql')) {
+//       req.body = {
+//         query: req.body
+//       };
+//     }
+//     next();
+//   }
+// ];
 
 const lruOpts: LRU.Options<any> = {
   max: 1000,
@@ -70,9 +70,7 @@ const setupGraphql = async (options: IMainOptions, app): Promise<any> => {
           apiModules: options.apiModules
         });
 
-        app.use(GRAPHQL_ROUTE, appCacheMiddleWare);
-
-        app.use(GRAPHQL_ROUTE, ...graphqlMiddleware, (req, res, next) => {
+        app.use(GRAPHQL_ROUTE, bodyParser.json(), (req, res, next) => {
           return graphqlExpress({
             ...schema,
             formatResponse: (data) => {
@@ -85,6 +83,8 @@ const setupGraphql = async (options: IMainOptions, app): Promise<any> => {
             }
           })(req, res, next);
         });
+
+        app.use(GRAPHQL_ROUTE, appCacheMiddleWare);
 
         if (options.enableGraphiql) {
           app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
