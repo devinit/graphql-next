@@ -2,12 +2,12 @@ language: node_js
 node_js:
 - v9.3.0
 install:
-- npm install -g yarn
+- npm install -g codecov
 - yarn
 script:
 - npm run build
 - npm run lint
-- npm run test -- -u
+- npm run coverage
 cache:
 - node_modules
 sudo: false

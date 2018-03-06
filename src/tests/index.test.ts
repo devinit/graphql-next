@@ -17,7 +17,7 @@ const getFromServer = (urlPath) =>
     });
 
 describe('main', () => {
-    it.skip('should be able to initialise server', () => {
+    it('should be able to initialise server', () => {
         return main({
             resolverPattern: '**/resolverT.js',
             apiModules: [apiModule],
@@ -31,7 +31,7 @@ describe('main', () => {
             }
         });
     }, 5000);
-    it.skip('should have a working GET root path', () => {
+    it('should have a working GET root path', () => {
         return main({
             resolverPattern: '**/resolverT.js',
             apiModules: [apiModule],
@@ -53,29 +53,26 @@ describe('main', () => {
             }
         });
     }, 5000);
-    it.skip('should return query results for a graphql query', async () => {
+    it('should return query results for a graphql query', async () => {
         return main({
             resolverPattern: '**/resolverT.js',
             apiModules: [apiModule],
             gqlTypesGlobPattern: '**/*.graphql'
         })
         .then(async (server: http.Server) => {
-            setTimeout(async () => {
-                  try {
+            try {
                 const apolloFetch = createApolloFetch({ uri: `${uri}${GRAPHQL_ROUTE}` });
                 const query = gql`
                     query APINAME {
                         apiName
-                    }
-                `;
+                    }`;
                 const resp = await apolloFetch({ query });
                 expect(prettyFormat(resp)).toMatchSnapshot();
+                server.close();
                 } catch (error) {
                     if (error) console.error(error);
                     process.exit(1);
                 }
-            }, 5000);
-            server.close();
         })
         .catch((error) => {
             if (error) {
@@ -83,7 +80,7 @@ describe('main', () => {
                 process.exit(1);
             }
         });
-    });
+    }, 500000);
     it('should have graphql route', () => {
         return main({
             resolverPattern: '**/resolverT.js',
@@ -91,10 +88,10 @@ describe('main', () => {
             gqlTypesGlobPattern: '**/*.graphql'
         })
         .then((server: http.Server) => {
-          return getFromServer(GRAPHQL_ROUTE).then((res: any) => {
-            server.close();
-            expect(res.statusCode).toBe(500);
-          });
+            return getFromServer(GRAPHQL_ROUTE).then((res: any) => {
+                server.close();
+                expect(res.statusCode).toBe(400);
+            });
         })
         .catch((error) => {
             if (error) {
@@ -102,8 +99,8 @@ describe('main', () => {
                 process.exit(1);
             }
         });
-    }, 5000);
-    it.skip('should return graphiql query', () => {
+    }, 10000);
+    it('should return graphiql query', () => {
         return main({
             resolverPattern: '**/resolverT.js',
             apiModules: [apiModule],

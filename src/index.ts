@@ -31,21 +31,6 @@ function verbosePrint(port, enableGraphiql) {
   }
 }
 
-// const graphqlMiddleware = [
-//   bodyParser.text({
-//     type: 'application/graphql'
-//   }),
-//   // tslint:disable-next-line:variable-name
-//   (req, _res, next) => {
-//     if (req.is('application/graphql')) {
-//       req.body = {
-//         query: req.body
-//       };
-//     }
-//     next();
-//   }
-// ];
-
 const lruOpts: LRU.Options<any> = {
   max: 1000,
   maxAge: 50000 * 60 * 60 * 60
@@ -69,7 +54,6 @@ const setupGraphql = async (options: IMainOptions, app): Promise<any> => {
           gqlTypesGlobPattern: options.gqlTypesGlobPattern,
           apiModules: options.apiModules
         });
-
         app.use(GRAPHQL_ROUTE, bodyParser.json(), (req, res, next) => {
           return graphqlExpress({
             ...schema,
@@ -83,6 +67,7 @@ const setupGraphql = async (options: IMainOptions, app): Promise<any> => {
             }
           })(req, res, next);
         });
+        // app.use(GRAPHQL_ROUTE, bodyParser.json(), graphqlExpress({...schema}));
 
         app.use(GRAPHQL_ROUTE, appCacheMiddleWare);
 

@@ -58,6 +58,7 @@ export const generateTsFromGql: (options?: IgqlTsOpts) =>  Promise <string | any
     }
 };
 
-if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
+if (require.main === module && process.env.NODE_ENV !== 'test') {
+    // this module was run directly from the command line as in node xxx.js
     generateTsFromGql({outFile: 'index.d.ts'});
 }
