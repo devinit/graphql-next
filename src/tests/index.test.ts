@@ -30,7 +30,7 @@ describe('main', () => {
                 process.exit(1);
             }
         });
-    }, 5000);
+    }, 10000);
     it('should have a working GET root path', () => {
         return main({
             resolverPattern: '**/resolverT.js',
@@ -52,7 +52,7 @@ describe('main', () => {
                 process.exit(1);
             }
         });
-    }, 5000);
+    }, 10000);
     it('should return query results for a graphql query', async () => {
         return main({
             resolverPattern: '**/resolverT.js',
@@ -80,7 +80,7 @@ describe('main', () => {
                 process.exit(1);
             }
         });
-    }, 500000);
+    }, 10000);
     it('should have graphql route', () => {
         return main({
             resolverPattern: '**/resolverT.js',
@@ -118,5 +118,5 @@ describe('main', () => {
                 process.exit(1);
             }
         });
-    }, 5000);
+    }, 10000);
 });
