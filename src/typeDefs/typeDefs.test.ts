@@ -12,9 +12,9 @@ describe('gql Types to Typescript types', () => {
     it('merged types should be convertable to a GraphQLSchema', async () => {
         const typeDefs = await getTypeDefs('**/*.gql');
         expect(buildSchema(typeDefs)).toBeInstanceOf(GraphQLSchema);
-    });
+    }, 20000);
     it('End to End test: should create typescript types from graphql files', async () => {
         const tsTypesNameSpace = await generateTsFromGql({globPattern: '**/*.gql'});
         expect(prettyFormat(tsTypesNameSpace)).toMatchSnapshot();
-    });
+    }, 20000);
 });
