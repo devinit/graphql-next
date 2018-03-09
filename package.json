@@ -65,7 +65,7 @@
     "@types/shortid": "0.0.29",
     "concurrently": "3.5.1",
     "git-pre-hooks": "1.2.0",
-    "graphql-tag": "^2.8.0",
+    "graphql-tag": "2.8.0",
     "jest": "22.4.2",
     "jest-cli": "22.4.2",
     "pretty-format": "22.4.0",
