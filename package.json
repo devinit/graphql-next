@@ -52,7 +52,7 @@
     "yarn": "^1.5.1"
   },
   "devDependencies": {
-    "@gql2ts/types": "1.4.3",
+    "@gql2ts/types": "1.5.0",
     "@types/body-parser": "1.16.8",
     "@types/color": "3.0.0",
     "@types/cors": "2.8.3",
