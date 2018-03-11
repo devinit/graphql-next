@@ -4,7 +4,7 @@
  */
 import * as LRU from 'lru-cache';
 import * as fs from 'fs-extra';
-import {isError, isUndefined} from '../isType';
+import {isError, isUndefined} from '@devinit/prelude';
 
 export interface IIsCached {
     key: string;
@@ -46,7 +46,7 @@ export const precache = async (fetchFnObj: IFetchFnObj, cacheFile: string = '.ca
             if (!fileExist) throw new Error('cache file doesnt exist');
             const cachedData: ICached[] | Error = await readCacheData();
             if (isError(cachedData)) throw new Error('Unknown Error reading cache file');
-            cachedData.map(async ({key, type}: ICached) => {
+            (cachedData as ICached[]).map(async ({key, type}: ICached) => {
                 setTimeout(async () => {
                     try {
                         await fetchFnObj[type](key); // NOTE: the fetch functions have cache set functions
