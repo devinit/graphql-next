@@ -28,7 +28,7 @@
     "graphql": ">= 0.10.0 < 0.12.0"
   },
   "dependencies": {
-    "@devinit/prelude": "^1.0.3",
+    "@devinit/prelude": "1.0.4",
     "@gql2ts/from-schema": "1.4.3",
     "apollo-fetch": "0.7.0",
     "apollo-link": "1.2.1",
