@@ -16,11 +16,13 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@devinit/prelude@1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@devinit/prelude/-/prelude-1.0.7.tgz#b68933729b1b81d0f5f75ce084f203a37d1f534f"
+"@devinit/prelude@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@devinit/prelude/-/prelude-1.1.1.tgz#1b03aaa6c23c1cff70268ec850530fa2ecadffb6"
   dependencies:
+    "@types/node-fetch" "^1.6.7"
     apollo-fetch "0.7.0"
+    fetch "^1.1.0"
     fs-extra "5.0.0"
     pg-promise "^8.2.1"
     prettier "1.11.1"
@@ -148,6 +150,12 @@
   resolved "https://registry.yarnpkg.com/@types/morgan/-/morgan-1.7.35.tgz#6358f502931cc2583d7a94248c41518baa688494"
   dependencies:
     "@types/express" "*"
+
+"@types/node-fetch@^1.6.7":
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/@types/node-fetch/-/node-fetch-1.6.7.tgz#521078e8f0c69a158e5022005aca92d2620f6d57"
+  dependencies:
+    "@types/node" "*"
 
 "@types/node@*", "@types/node@^9.4.6":
   version "9.4.6"
@@ -1015,6 +1023,12 @@ before-after-hook@^1.1.0:
 binary-extensions@^1.0.0:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-1.11.0.tgz#46aa1751fb6a2f93ee5e689bb1087d4b14c6c205"
+
+biskviit@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/biskviit/-/biskviit-1.0.1.tgz#037a0cd4b71b9e331fd90a1122de17dc49e420a7"
+  dependencies:
+    psl "^1.1.7"
 
 block-stream@*:
   version "0.0.9"
@@ -1944,7 +1958,7 @@ encodeurl@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
 
-encoding@^0.1.11:
+encoding@0.1.12, encoding@^0.1.11:
   version "0.1.12"
   resolved "https://registry.yarnpkg.com/encoding/-/encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb"
   dependencies:
@@ -2188,6 +2202,13 @@ fb-watchman@^2.0.0:
   resolved "https://registry.yarnpkg.com/fb-watchman/-/fb-watchman-2.0.0.tgz#54e9abf7dfa2f26cd9b1636c588c1afc05de5d58"
   dependencies:
     bser "^2.0.0"
+
+fetch@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/fetch/-/fetch-1.1.0.tgz#0a8279f06be37f9f0ebb567560a30a480da59a2e"
+  dependencies:
+    biskviit "1.0.1"
+    encoding "0.1.12"
 
 figures@^2.0.0:
   version "2.0.0"
@@ -4432,16 +4453,7 @@ pg-pool@~2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/pg-pool/-/pg-pool-2.0.3.tgz#c022032c8949f312a4f91fb6409ce04076be3257"
 
-pg-promise@8.2.1:
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/pg-promise/-/pg-promise-8.2.1.tgz#af11f4009a8d9d0e0d37d2915a5e7e0f66865838"
-  dependencies:
-    manakin "0.5.1"
-    pg "7.4.1"
-    pg-minify "0.5.4"
-    spex "2.0.2"
-
-pg-promise@^8.2.1:
+pg-promise@8.2.2, pg-promise@^8.2.1:
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/pg-promise/-/pg-promise-8.2.2.tgz#079a71eb358ef7f27f78f4bc3653a1f4bb9266e6"
   dependencies:
@@ -4577,6 +4589,10 @@ proxy-addr@~2.0.3:
 pseudomap@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
+
+psl@^1.1.7:
+  version "1.1.25"
+  resolved "https://registry.yarnpkg.com/psl/-/psl-1.1.25.tgz#135edc9c7ba48cd8e4a6903fded8c7f348a5d2ee"
 
 punycode@^1.4.1:
   version "1.4.1"
