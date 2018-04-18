@@ -7,7 +7,7 @@
 [![codecov](https://codecov.io/gh/devinit/graphql-next/branch/master/graph/badge.svg)](https://codecov.io/gh/devinit/graphql-next)
 
 
-Currently a very opinionated graphql framework with postgres db support specifically built for datahub API
+Currently a very opinionated graphql framework with postgres db support specifically built for datahub API and related projects
 
 ______________________________________
 
