@@ -68,7 +68,7 @@
     "jest": "22.4.2",
     "jest-cli": "22.4.2",
     "pretty-format": "22.4.0",
-    "release-it": "7.2.1",
+    "release-it": "7.6.3",
     "ts-jest": "22.4.1",
     "tslint": "5.9.1",
     "typescript": "2.7.2"
