@@ -115,9 +115,9 @@
     "@types/express-serve-static-core" "*"
     "@types/serve-static" "*"
 
-"@types/fs-extra@5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-5.0.1.tgz#cd856fbbdd6af2c11f26f8928fd8644c9e9616c9"
+"@types/fs-extra@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-5.1.0.tgz#2a325ef97901504a3828718c390d34b8426a10a1"
   dependencies:
     "@types/node" "*"
 
@@ -4432,16 +4432,7 @@ pg-pool@~2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/pg-pool/-/pg-pool-2.0.3.tgz#c022032c8949f312a4f91fb6409ce04076be3257"
 
-pg-promise@8.2.1:
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/pg-promise/-/pg-promise-8.2.1.tgz#af11f4009a8d9d0e0d37d2915a5e7e0f66865838"
-  dependencies:
-    manakin "0.5.1"
-    pg "7.4.1"
-    pg-minify "0.5.4"
-    spex "2.0.2"
-
-pg-promise@^8.2.1:
+pg-promise@8.2.2, pg-promise@^8.2.1:
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/pg-promise/-/pg-promise-8.2.2.tgz#079a71eb358ef7f27f78f4bc3653a1f4bb9266e6"
   dependencies:
