@@ -121,9 +121,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/graphql@0.12.3":
-  version "0.12.3"
-  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.12.3.tgz#c429585aaa4523135e0ab4e12dec72d2d913946f"
+"@types/graphql@0.13.4":
+  version "0.13.4"
+  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.13.4.tgz#55ae9c29f0fd6b85ee536f5c72b4769d5c5e06b1"
+  integrity sha512-B4yel4ro2nTb3v0pYO8vO6SjgvFJSrwUY+IO6TUSLdOSB+gQFslylrhRCHxvXMIhxB71mv5PEE9dAX+24S8sew==
 
 "@types/helmet@0.0.37":
   version "0.0.37"
@@ -4432,16 +4433,7 @@ pg-pool@~2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/pg-pool/-/pg-pool-2.0.3.tgz#c022032c8949f312a4f91fb6409ce04076be3257"
 
-pg-promise@8.2.1:
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/pg-promise/-/pg-promise-8.2.1.tgz#af11f4009a8d9d0e0d37d2915a5e7e0f66865838"
-  dependencies:
-    manakin "0.5.1"
-    pg "7.4.1"
-    pg-minify "0.5.4"
-    spex "2.0.2"
-
-pg-promise@^8.2.1:
+pg-promise@8.2.2, pg-promise@^8.2.1:
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/pg-promise/-/pg-promise-8.2.2.tgz#079a71eb358ef7f27f78f4bc3653a1f4bb9266e6"
   dependencies:
