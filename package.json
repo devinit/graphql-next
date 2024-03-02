@@ -45,7 +45,7 @@
     "morgan": "^1.9.0",
     "pg-promise": "8.2.2",
     "prettier": "1.11.1",
-    "ramda": "0.25.0",
+    "ramda": "0.29.1",
     "shortid": "2.2.8"
   },
   "devDependencies": {
@@ -60,7 +60,7 @@
     "@types/lru-cache": "4.1.0",
     "@types/morgan": "1.7.35",
     "@types/node": "9.4.7",
-    "@types/ramda": "0.25.20",
+    "@types/ramda": "0.29.11",
     "@types/shortid": "0.0.29",
     "concurrently": "3.5.1",
     "git-pre-hooks": "1.2.0",
